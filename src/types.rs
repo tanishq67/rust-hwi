@@ -10,7 +10,7 @@ pub struct HWIExtendedPubKey {
 
 #[derive(Deserialize)]
 pub struct HWISignature {
-    pub signature: Deref<Target = Vec<u8>>,
+    pub signature: Vec<u8>,
 }
 
 #[derive(Deserialize)]
