@@ -10,7 +10,7 @@ pub struct HWIExtendedPubKey {
 
 #[derive(Deserialize)]
 pub struct HWISignature {
-    pub signature: Vec<u8>,
+    pub signature: Vec<u32>,
 }
 
 #[derive(Deserialize)]
@@ -20,7 +20,7 @@ pub struct HWIAddress {
 
 #[derive(Deserialize)]
 pub struct HWIPartiallySignedTransaction {
-    pub psbt: String,
+    pub psbt: Deref<Target = PartiallySignedTransaction>,
 }
 
 // TODO: use Descriptors
